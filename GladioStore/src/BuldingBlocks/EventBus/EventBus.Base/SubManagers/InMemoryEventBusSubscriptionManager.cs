@@ -118,7 +118,7 @@ namespace EventBus.Base.SubManagers
 
         public bool HasSubscriptionsForEvent(string eventName) => _handlers.ContainsKey(eventName);
 
-        public Type GetEVentTypeByName(string eventName) => _eventTypes.SingleOrDefault(t => t.Name = eventName);
+        public Type GetEVentTypeByName(string eventName) => _eventTypes.SingleOrDefault(t => t.Name == eventName);
 
         public string GetEventKey<T>()
         {
